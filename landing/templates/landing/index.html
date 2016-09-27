@@ -1,15 +1,21 @@
-{% extends 'snowball/base.html' %}
+{% extends "landing/litlbot_base.html" %}
+
+{% block navbar_links %}
+    <li>
+        <a class="page-scroll" href="#features">Features</a>
+    </li>
+{% endblock %}
 
 {% block background_container_element %}
-    <!-- +++++ Welcome Section +++++ -->
     <header>
         <div class="container">
-            <div class="intro-text">
-              <div class="intro-heading">Because work is <span class="intro-more">more</span><br>than just labor.</div>
-              <div class="intro-lead-in">Pep is a smart bot dedicated towards making your<br>team fun and engaging.</div>
-              <a href="/slack/register/auth" name="add-to-slack"><button id="Top Button" class="add-to-slack-top-button ga-slack-button waggle"><img class='slack-top-img' src="/static/assets/img/slack.svg"/>  ADD TO SLACK</button></a>
-              <p style="font-size: 15px;">Start your free trial. No credit card required.</p>
+          <div class="intro-text">
+            <div class="intro-heading">Next generation <br><span class="intro-more">'in classroom'</span><br>experience</div>
+            <div class="intro-lead-in">Litl is a Slack bot that enables realtime interaction with students in class,
+                <br>for a more personlized learning
             </div>
+            <a href="/slack/edubot/register/auth/" name="add-to-slack"><button id="Top Button" class="add-to-slack-top-button ga-slack-button waggle"><img class='slack-top-img' src="https://s3.amazonaws.com/litlbot-assets/slack.svg"/>  ADD TO SLACK</button></a>
+          </div>
         </div>
     </header>
 {% endblock %}
@@ -17,51 +23,9 @@
 {% block content %}
 
     <style type="text/css">
-        .h-divider{
-             margin-top:5px;
-             margin-bottom:5px;
-             height:1px;
-             width:100%;
-             border-top:1px solid gray;
-        }
-
-        .mt {
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
         .pt {
             padding-top: 50px;
             padding-bottom: 50px;
-        }
-        .pricing-container {
-            border: 0;
-            background: #fff;
-            border-radius: 1rem;
-            box-shadow: 0 0 4px rgba(0,0,0,0.15);
-            margin: 0 auto;
-            width: 75%;
-        }
-        .pricing-h1 {
-            text-align: center;
-            line-height: 1.2;
-            margin-bottom: 0.5em;
-            text-transform: none;
-            margin-top: 40px;
-            font-size: 31px;
-        }
-        .pricing-p {
-            font-family: "Montserrat-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-              font-size: 17px;
-            margin-top: 35px;
-
-        }
-        .pricing-hr {
-              margin: 3em auto;
-            width: 40%;
-        }
-        .pricing-h2 {
-            text-transform: none;
         }
     </style>
 
@@ -69,83 +33,45 @@
 
     <!-- +++++ Information Section +++++ -->
 
-    {% include 'landing/feature_snippet.html' %}
-
-    <div class="container" style="margin-bottom: 40px">
-        <div class="row centered slack-button-div">
-          {% include "landing/add_to_slack_button.html" with add_to_slack_button_id="Bottom Button" %}
-
-        </div>
-    </div>
-
-    <!-- Pricing Section -->
-    <!--<section id="pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading pricing-heading">Pricing</h2>
-                    {#{% include 'landing/pricing.html' with add_to_slack_button_id="Pricing Button" %}#}
-                </div>
+    <section id="features" class="container pt">
+        <div class="row pep-feature">
+            <a name="features"></a>
+            <div class="col-lg-5 col-sm-5 col-md-5">
+                <img src="https://s3.amazonaws.com/litlbot-assets/know.svg" alt="" class="img-rounded img-responsive">
+                <h1 class="feature-title">Your digital assistant</h1>
+                <p class='feature-text'>Take a pop quiz, do a feedback poll to assess retention and do more.</p>
+            </div>
+            <div class="col-lg-7 col-sm-7 col-md-7 centered">
+                <img src="https://s3.amazonaws.com/litlbot-assets/hi.png" alt="" class="img-rounded img-responsive">
             </div>
         </div>
-    </section> -->
+        <div class="row pep-feature-middle">
+          <div class="col-lg-7 col-sm-7 col-md-7 centered">
+            <img src="https://s3.amazonaws.com/litlbot-assets/feedback.png" alt="" class="img-rounded img-responsive">
+            </div>
+            <div class="col-lg-5 col-sm-5 col-md-5 feedback">
+              <img src="https://s3.amazonaws.com/litlbot-assets/insights.svg" alt="" class="img-rounded img-responsive">
+              <h1 class="feature-title">Assess and align</h1>
+                <p class='feature-text-feedback'>View feedback results in a live classroom and adapt in real time.</p>
+            </div>
 
-    <!-- Pricing Section -->
-    <section id="pricing">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading pricing-heading">Pricing</h2>
-            <!-- Pricing Section -->
-              <div class="container pricing-container" id='buy-now'>
-                <h1 class="pricing-h1">$19/month - Straightforward, all-inclusive pricing</h1>
-                <p class="pricing-p">Pep's monthly prices are fixed — <b>we don’t charge per user</b> — so you’re never charged more if you hire someone new. $19/month means $19/month <b>total</b>, no matter how many employees you have.</p>
-                <hr class="pricing-hr">
-                <h2 class="pricing-h2">Getting started is absolutely free</h2>
-                <p class="pricing-p">Everyone gets a <b>14 day free trial</b>. After that you sign up for our simple $19/month plan.</p>
-                <hr class="pricing-hr">
-                <h2 class="pricing-h2">Any questions about anything?</h2>
-                <p class="pricing-p">If you have any questions about pricing, policies, refunds, or absolutely anything else, drop our incredible <a href="https://pepai.freshdesk.com/support/home">support team</a> a note.</p>
-              </div>
-          </div>
         </div>
-      </div>
+        <div class="row pep-feature">
+            <div class="col-lg-5 col-sm-5 col-md-5">
+                <img src="https://s3.amazonaws.com/litlbot-assets/feedback.svg" alt="" class="img-rounded img-responsive">
+                <h1 class="feature-title">Anonymous questions</h1>
+                <p class='feature-text'>Students can ask questions anonymously and other students can up vote.</p>
+            </div>
+            <div class="col-lg-7 col-sm-7 col-md-7 centered">
+              <img src="https://s3.amazonaws.com/litlbot-assets/ask.png" alt="" class="img-rounded img-responsive">
+            </div>
+        </div>
     </section>
 
 {% endblock %}
 
-{% block javascript %}
-
-    <script type="text/javascript">
-
-        // created to handle button click even if ga code fails to load
-        // Refer: https://developers.google.com/analytics/devguides/collection/analyticsjs/sending-hits#knowing_when_the_hit_has_been_sent
-        function createFunctionWithTimeout(callback, opt_timeout) {
-          var called = false;
-          function fn() {
-            if (!called) {
-              called = true;
-              callback();
-            }
-          }
-          setTimeout(fn, opt_timeout || 1000);
-          return fn;
-        }
-
-        $(".ga-slack-button").click(function(event){
-            var this_element = $(this);
-            var button_id = this_element.attr('id');
-            event.preventDefault();
-
-            ga('send', 'event', {
-                eventCategory: 'Add To Slack',
-                eventAction: 'Click',
-                eventLabel: button_id,
-                eventValue: 1,
-                hitCallback: createFunctionWithTimeout(function() {
-                    window.location.href = "/slack/register/auth";
-                })
-            });
-        })
-    </script>
+{% block footer_links %}
+    <li><a href="/litlbot/privacy">PRIVACY POLICY</a></li>
+    <li><a href="/litlbot/tos">TERMS OF USE</a></li>
+    <li><a href="mailto:hi@litlbot.com?Subject=Hello!">CONTACT US</a></li>
 {% endblock %}

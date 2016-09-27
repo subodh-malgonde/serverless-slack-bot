@@ -9,17 +9,17 @@
     {% block head %}{% endblock %}
 
     <!-- Bootstrap Core CSS -->
-    <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/assets/css/pricing.css" rel="stylesheet">
+    <link href="https://s3.amazonaws.com/litlbot-assets/css/bootstrap.css" rel="stylesheet">
+    <link href="https://s3.amazonaws.com/litlbot-assets/css/pricing.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://s3.amazonaws.com/litlbot-assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="/static/assets/css/agency.css" rel="stylesheet">
+    <link href="https://s3.amazonaws.com/litlbot-assets/css/agency.css" rel="stylesheet">
     {% block css %}{% endblock %}
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -51,7 +51,7 @@
                             <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                         </button>
                         <a class="navbar-brand page-scroll" href="/">
-                            <img src="{{ logo_link }}" style="height: 48px;width: 48px"/> {{ bot_name }}
+                            <img src="https://s3.amazonaws.com/litlbot-assets/logo.png" style="height: 48px;width: 48px"/> {{ bot_name }}
                         </a>
                     </div>
 
@@ -81,7 +81,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3" style="font-size: 26px">
-                    <img src="{{ logo_link }}" style="height: 40px;width: 40px"/> {{ bot_name }}
+                    <img src="https://s3.amazonaws.com/litlbot-assets/logo.png" style="height: 40px;width: 40px"/> {{ bot_name }}
                 </div>
                 <div class="col-md-6">
                     <ul class="list-inline quicklinks">
@@ -93,10 +93,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="https://s3.amazonaws.com/litlbot-assets/js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="https://s3.amazonaws.com/litlbot-assets/js/bootstrap.min.js"></script>
 
     {% block javascript %}{% endblock %}
 

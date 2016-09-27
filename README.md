@@ -4,12 +4,15 @@ Next generation ‘in classroom’ experience. Litlbot is a Slack bot that enabl
 
 ##Digital Assistant for Professors
 Litlbot allows professors to take a live 'in classroom' pop quiz or take a feedback survey from students. Questions could be based on course content, teaching speed, class notes, assignments, quizzes etc.
+
 ![Assistant](http://www.litlbot.com/static/assets/img/litlbot/hi.png)
 ##Assess Feedback
 Professors can view feedback results in a live classroom and adapt in real time.
+
 ![Feedback](http://www.litlbot.com/static/assets/img/litlbot/feedback.png)
 ##Students ask anonymous questions
 Not every student is comfortable asking questions in a classroom. Litlbot allows students to anonymously ask questions.
+
 ![Ask](http://www.litlbot.com/static/assets/img/litlbot/ask.png)
 
 ## Deployment Instructions
