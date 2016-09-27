@@ -19,6 +19,7 @@ Not every student is comfortable asking questions in a classroom. Litlbot allows
 1. Visit the [homepage]() to add the bot to your team.
 2. Bot assumes that the user adding this bot is the professor and all other team members are students.
 3. Say `hi` to the bot and it will guide you about the functionality.
+
 ## Dev Stack
 1. Python, Django
 2. [Zappa](https://github.com/Miserlou/Zappa) - a serverless Python webservices framework
