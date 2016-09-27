@@ -1,0 +1,27 @@
+{
+    "dev": {
+        "django_settings": "snowball.settings", 
+        "s3_bucket": "litlbot",
+        "environment_variables": {
+            "DATABASE_URL": "<your-database-url>",
+            "AWS_ACCESS_KEY_ID":"<your-access-key-id>",
+            "AWS_SECRET_ACCESS_KEY": "<your-secret-access-key>",
+            "AWS_SNS_ARN": "<your-sns-arn>"
+        },
+        "project_name": "Litlbot",
+        "timeout_seconds": 30,
+        "keep_warm": false,
+        "aws_region": "us-east-1",
+        "events": [
+            {
+                "function": "bot.utils.sns_test",
+                "event_source": {
+                    "arn":  "<your-sns-arn>",
+                    "events": [
+                        "sns:Publish"
+                    ]
+                }
+            }
+        ]
+    }
+}
