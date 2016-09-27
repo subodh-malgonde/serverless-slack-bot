@@ -408,6 +408,7 @@ class Employee(models.Model):
         # send_welcome_mail(queue, bot, employee)
 
         publish_sns_event("accounts.models.acquire_teambot_team", {"team_bot_id": teamb.id, "intro": False})
+        publish_sns_event("accounts.models.send_welcome_dm", {"team_bot_id": teamb.id, "employee_id": employee.id})
 
         TeamBotOnboarding.objects.get_or_create(team_bot=teamb)
         
@@ -695,3 +696,11 @@ def deactivate_team_bot(team_bot_id):
     if team:
         team.active = False
         team.save()
+
+
+def send_welcome_dm(team_bot_id, employee_id):
+    from bot.utils import send_message_to_user
+    team_bot = TeamBot.objects.get(id=team_bot_id)
+    employee = Employee.objects.get(id=employee_id)
+    text = ":wave: Hi, I am Litlbot. I am here to help you make your classroom engaging.\nSay `hi` to get started"
+    send_message_to_user(employee, text, team_bot=team_bot)
