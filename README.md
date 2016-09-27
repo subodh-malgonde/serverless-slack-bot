@@ -19,7 +19,7 @@ Not every student is comfortable asking questions in a classroom. Litlbot allows
 [Click here](./Deployment.md)
 
 ## Testing instructions
-1. Visit the [homepage]() to add the bot to your team.
+1. Visit the [homepage](https://jropljt2oa.execute-api.us-east-1.amazonaws.com/dev/) to add the bot to your team.
 2. Bot assumes that the user adding this bot is the professor and all other team members are students.
 3. Say `hi` to the bot and it will guide you about the functionality.
 
