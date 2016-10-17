@@ -1,5 +1,7 @@
 #Litlbot
 
+**Update**: This bot won the AWS Serverless Chatbot Hackathon [http://devpost.com/software/litlbot-cqm54z](http://devpost.com/software/litlbot-cqm54z)
+
 Next generation ‘in classroom’ experience. Litlbot is a Slack bot that enables realtime interaction with students in class, for a more personalized learning.
 
 ##Digital Assistant for Professors
